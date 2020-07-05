@@ -17,6 +17,8 @@ function HomeScreen(props) {
   const { products, loading, error } = productList;
   const dispatch = useDispatch();
 
+  // get the list of products in initial mount of this component
+  // mount the component each time the categoty change
   useEffect(() => {
     dispatch(listProducts(category));
     return () => {
