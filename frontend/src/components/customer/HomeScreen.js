@@ -12,10 +12,13 @@ function HomeScreen(props) {
   // State for choosing product category
   const category = props.match.params.id ? props.match.params.id : "";
 
+  // get the list of products from the reducer
   const productList = useSelector((state) => state.productListReducer);
   const { products, loading, error } = productList;
   const dispatch = useDispatch();
 
+  // get the list of products in initial mount of this component
+  // mount the component each time the categoty change
   useEffect(() => {
     dispatch(listProducts(category));
     return () => {
@@ -27,6 +30,8 @@ function HomeScreen(props) {
     e.preventDefault();
     dispatch(listProducts(category, searchKeyword, sortOrder));
   };
+
+  // sorts the products loaded in thi s component
   const sortHandler = (e) => {
     setSortOrder(e.target.value);
     dispatch(listProducts(category, searchKeyword, sortOrder));
