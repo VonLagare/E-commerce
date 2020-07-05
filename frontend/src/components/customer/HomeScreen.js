@@ -12,6 +12,7 @@ function HomeScreen(props) {
   // State for choosing product category
   const category = props.match.params.id ? props.match.params.id : "";
 
+  // get the list of products from the reducer
   const productList = useSelector((state) => state.productListReducer);
   const { products, loading, error } = productList;
   const dispatch = useDispatch();
