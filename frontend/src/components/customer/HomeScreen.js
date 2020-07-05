@@ -30,6 +30,8 @@ function HomeScreen(props) {
     e.preventDefault();
     dispatch(listProducts(category, searchKeyword, sortOrder));
   };
+
+  // sorts the products loaded in this component
   const sortHandler = (e) => {
     setSortOrder(e.target.value);
     dispatch(listProducts(category, searchKeyword, sortOrder));
