@@ -6,7 +6,7 @@ function AsideScreen(props) {
   const user = useSelector((state) => state.userSigninReducer);
   const { userInfo } = user;
 
-  // needs cleaning
+  // needs   cleaning
   return (
     <aside className="sidebar">
       <h3>Shopping Categories</h3>
