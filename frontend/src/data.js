@@ -1,0 +1,40 @@
+export default {
+  products: [
+    {
+      id: 1,
+      name: "Slim shirt",
+      category: "Shirts",
+      image: "images/d1.jpg",
+      price: 60,
+      rating: 4.5,
+      numReviews: 11,
+    },
+    {
+      id: 2,
+      name: "Fit shirt",
+      category: "Shirts",
+      image: "images/d1.jpg",
+      price: 50,
+      rating: 5.0,
+      numReviews: 12,
+    },
+    {
+      id: 3,
+      name: "Best Pants",
+      category: "Pants",
+      image: "images/d1.jpg",
+      price: 70,
+      rating: 4.0,
+      numReviews: 11,
+    },
+    {
+      id: 4,
+      name: "New Pants",
+      category: "Pants",
+      image: "images/d1.jpg",
+      price: 80,
+      rating: 4.0,
+      numReviews: 15,
+    },
+  ],
+};
