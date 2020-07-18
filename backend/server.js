@@ -1,5 +1,4 @@
 import express from "express";
-import data from "./data";
 import dotenv from "dotenv";
 import config from "./config";
 import mongoose from "mongoose";
@@ -22,7 +21,10 @@ mongoose
     useCreateIndex: true,
     useFindAndModify: false,
   })
-  .catch((error) => console.log(error.reason));
+  .then(() => {
+    console.log("Connected to databse");
+  })
+  .catch((error) => console.log("Cannot connect to databse", error.reason));
 
 const app = express();
 

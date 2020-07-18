@@ -7,7 +7,9 @@ const router = express.Router();
 router.post("/register", async (req, res) => {
   try {
     const user = new User({
-      name: req.body.name,
+      firstName: req.body.name,
+      lastName: req.body.name,
+      middleName: req.body.name,
       email: req.body.email,
       password: req.body.password,
     });
@@ -17,7 +19,9 @@ router.post("/register", async (req, res) => {
     if (newUser) {
       res.send({
         _id: newUser._id,
-        name: newUser.name,
+        firstName: newUser.name,
+        lastName: newUser.name,
+        middleName: newUser.name,
         email: newUser.email,
         role: newUser.role,
         token: getToken(newUser),
